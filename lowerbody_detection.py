@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Aug 15 23:16:30 2019
 
-@author: ASUS
-"""
-
-# Face Recognition
 
 import cv2
 
