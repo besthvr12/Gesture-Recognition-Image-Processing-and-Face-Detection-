@@ -5,8 +5,8 @@ import cv2
 body_cascade = cv2.CascadeClassifier('haarcascade_lowerbody.xml') # load the cascade for the lowerface.
 
 
-def find(gray, lframe): # We create a function that takes as input the image in black and white (gray) and the original image (frame), and that will return the same image with the detector rectangles. 
-    lowerbody = body_cascade.detectMultiScale(gray, 1.08, 3) # the detectMultiScale method from the face cascade to locate one or several faces in the image.Here 1.08 is the size of the image we are reducing.(1.08 and 3 are the good combination for lowerbody)
+def find(gray, lframe): # We create a function that takes as input the image in black and white (gray) and the original image (lframe), and that will return the same image with the detector rectangles. 
+    lowerbody = body_cascade.detectMultiScale(gray, 1.08, 3) # the detectMultiScale method from the body cascade to locate one or several loerbody in the image.Here 1.08 is the size of the image we are reducing.(1.08 and 3 are the good combination for lowerbody)
     for (lx, ly, lw, lh) in lowerbody: # For each detected lowerbody:
         cv2.rectangle(lframe, (lx, ly), (lx+lw, ly+lh), (234, 25, 0), 2)
         
